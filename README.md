@@ -7,7 +7,7 @@
 <h2>To test locally</h2>
 <ol>
   <li>Download or clone the repository</li>
-  <li>create an .env file in your root directory</li>
+  <li>create an env file in your root directory</li>
   <li>create a database on mongodb.com and get the mongo uri. if not sure of your ip address when creating the database, set the ip to 0.0.0.0 to access from anywhere</li>
   <li>add your mongo url in the form <i>MONGO_URI='your mongo uri goes here'</i></li>
   <li>make sure node is installed </li>
