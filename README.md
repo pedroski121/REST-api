@@ -2,12 +2,12 @@
 <p>This API was developed to perform the basic CREATE, READ, UPDATE, DELETE operations on a database<p/>
 <p>The UML file can be found at https://github.com/pedroski121/REST-api/blob/main/UML.png </p>
 
-<p>The live server is temporary running at https://hng-task2-vmzm.onrender.com</p>
+<p>The live server is temporarily running at https://hng-task2-vmzm.onrender.com</p>
 
 <h2>To test locally</h2>
 <ol>
   <li>Download or clone the repository</li>
-  <li>create an env file in your root directory</li>
+  <li>create a .env file in your root directory</li>
   <li>create a database on mongodb.com and get the mongo uri. if not sure of your ip address when creating the database, set the ip to 0.0.0.0 to access from anywhere</li>
   <li>add your mongo url in the form <i>MONGO_URI='your mongo uri goes here'</i></li>
   <li>make sure node is installed </li>
