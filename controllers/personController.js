@@ -1,10 +1,15 @@
 import { Person } from "../models/person-model.js"
-
+import { validationResult } from "express-validator"
 
 // controller to create a new person
 export const postPerson = async (req,res ) =>{
     const {name} = req.body
     const newPerson = new Person({name})
+    const errors = validationResult(req);
+    if(!errors.isEmpty()){
+        res.send({success:false, message:'name should be a string'})
+    }
+    else {
     try{
         await newPerson.save()   
         res.send({success:true, person:{name, id:newPerson._id}})
@@ -12,7 +17,7 @@ export const postPerson = async (req,res ) =>{
     } catch (error){
         console.log(error)
         res.send({success:false, message:`${name} not added`})
-    }
+    }}
 }
 
 // controller to get person details 

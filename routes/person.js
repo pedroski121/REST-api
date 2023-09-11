@@ -1,9 +1,10 @@
 import express from 'express'
+import {body, check} from 'express-validator'
 import { postPerson, patchPerson, deletePerson, getPerson } from '../controllers/personController.js'
 const router = express.Router()
 
 router.get('/api/:user_id', getPerson)
-router.post('/api', postPerson)
+router.post('/api', check('name').isString().notEmpty(), postPerson)
 router.delete('/api/:user_id', deletePerson)
 router.patch('/api/:user_id', patchPerson)
 
