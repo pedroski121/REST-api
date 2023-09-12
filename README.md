@@ -47,6 +47,6 @@
 
 <h2>TO DELETE(delete request)</h2>
 <ol>
-    <li>make a get request to /api/:user_id</li>
+    <li>make a delete request to /api/:user_id</li>
   <li>If successful or not successful it will be in the form  <br/>{success:boolean, message:string}</li>
 </ol>
